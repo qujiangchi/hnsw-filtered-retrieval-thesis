@@ -1,0 +1,36 @@
+Bootstrap: docker
+From: ubuntu:24.04
+
+%files
+  dataset_environment.yml /environment.yml
+
+%post
+  apt-get update
+  apt-mark hold openssh-client
+  apt-get install -y bzip2 curl libxml2 git
+
+  apt-get clean
+  rm -rf /var/lib/apt/lists/*
+
+  curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/2.3.2 | tar -xvj bin/micromamba
+
+  mkdir -p /opt/env/micromamba
+
+  export MAMBA_ROOT_PREFIX=/opt/env/micromamba
+  eval "$(micromamba shell hook -s posix)"
+  micromamba activate
+
+  mkdir -p /cache
+  export TMPDIR=/cache
+
+  micromamba install -y -q -f /environment.yml
+  micromamba clean --all --yes
+
+  pip install --no-cache-dir torch==2.8.0 torchvision==0.23.0
+  pip install --no-cache-dir timm==1.0.19 transformers==4.56.1 sentence-transformers==5.1.0 accelerate==1.10.1 hf-xet==1.1.10 xformers==0.0.32.post2 fastembed-gpu==0.7.3 model2vec==0.6.0
+
+  echo 'export MAMBA_ROOT_PREFIX=/opt/env/micromamba' >> $SINGULARITY_ENVIRONMENT
+  echo 'eval "$(micromamba shell hook -s posix)"' >> $SINGULARITY_ENVIRONMENT
+  echo 'micromamba activate' >> $SINGULARITY_ENVIRONMENT
+
+  echo 'export CUPY_CACHE_DIR=./.cupy' >> $SINGULARITY_ENVIRONMENT

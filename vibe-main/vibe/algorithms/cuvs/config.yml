@@ -1,0 +1,127 @@
+uint8:
+  euclidean:
+  - base_args: ['@metric']
+    constructor: cuVSIVF
+    disabled: false
+    gpu: true
+    singularity_image: cuvs
+    module: vibe.algorithms.cuvs
+    name: cuvs-ivf
+    run_groups:
+      base-512:
+        args: [[512]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64]]
+      base-1024:
+        args: [[1024]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64, 128]]
+      base-2048:
+        args: [[2048]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64, 128, 256]]
+      base-4096:
+        args: [[4096]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64, 128, 256, 512]]
+      base-8192:
+        args: [[8192]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]]
+  - base_args: ['@metric']
+    constructor: cuVSIVFPQ
+    disabled: false
+    gpu: true
+    singularity_image: cuvs
+    module: vibe.algorithms.cuvs
+    name: cuvs-ivfpq
+    run_groups:
+      base-512:
+        args: [[512], [0], [8, 6, 4]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64], [1, 2, 4]]
+      base-1024:
+        args: [[1024], [0], [8, 6, 4]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64, 128], [1, 2, 4]]
+      base-2048:
+        args: [[2048], [0], [8, 6, 4]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64, 128, 256], [1, 2, 4]]
+      base-4096:
+        args: [[4096], [0], [8, 6, 4]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64, 128, 256, 512], [1, 2, 4]]
+  - base_args: ['@metric']
+    constructor: cuVSCAGRA
+    disabled: false
+    gpu: true
+    singularity_image: cuvs
+    module: vibe.algorithms.cuvs
+    name: cuvs-cagra
+    run_groups:
+      base:
+        args: [[4, 8, 16, 32, 64, 128], [4, 8, 16, 32, 64, 128]]
+        query_args: [[128, 256, 384, 512], [1, 2, 4, 8, 16, 32, 64]]
+float:
+  any:
+  - base_args: ['@metric']
+    constructor: cuVSIVF
+    disabled: false
+    gpu: true
+    singularity_image: cuvs
+    module: vibe.algorithms.cuvs
+    name: cuvs-ivf
+    run_groups:
+      base-512:
+        args: [[512]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64]]
+      base-1024:
+        args: [[1024]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64, 128]]
+      base-2048:
+        args: [[2048]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64, 128, 256]]
+      base-4096:
+        args: [[4096]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64, 128, 256, 512]]
+      base-8192:
+        args: [[8192]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]]
+  - base_args: ['@metric']
+    constructor: cuVSIVFPQ
+    disabled: false
+    gpu: true
+    singularity_image: cuvs
+    module: vibe.algorithms.cuvs
+    name: cuvs-ivfpq
+    run_groups:
+      base-512:
+        args: [[512], [0], [8, 6, 4]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64], [1, 2, 4]]
+      base-1024:
+        args: [[1024], [0], [8, 6, 4]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64, 128], [1, 2, 4]]
+      base-2048:
+        args: [[2048], [0], [8, 6, 4]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64, 128, 256], [1, 2, 4]]
+      base-4096:
+        args: [[4096], [0], [8, 6, 4]]
+        query_args: [[1, 2, 4, 8, 16, 32, 64, 128, 256, 512], [1, 2, 4]]
+  - base_args: ['@metric']
+    constructor: cuVSCAGRA
+    disabled: false
+    gpu: true
+    singularity_image: cuvs
+    module: vibe.algorithms.cuvs
+    name: cuvs-cagra
+    run_groups:
+      degree-4:
+        args: [[4], [4, 8, 16, 32, 64, 128]]
+        query_args: [[128, 256, 384, 512], [1, 2, 4, 8, 16, 32, 64]]
+      degree-8:
+        args: [[8], [8, 16, 32, 64, 128]]
+        query_args: [[128, 256, 384, 512], [1, 2, 4, 8, 16, 32, 64]]
+      degree-16:
+        args: [[16], [16, 32, 64, 128]]
+        query_args: [[128, 256, 384, 512], [1, 2, 4, 8, 16, 32, 64]]
+      degree-32:
+        args: [[32], [32, 64, 128]]
+        query_args: [[128, 256, 384, 512], [1, 2, 4, 8, 16, 32, 64]]
+      degree-64:
+        args: [[64], [64, 128]]
+        query_args: [[128, 256, 384, 512], [1, 2, 4, 8, 16, 32, 64]]
+      degree-128:
+        args: [[128], [128]]
+        query_args: [[128, 256, 384, 512], [1, 2, 4, 8, 16, 32, 64]]
