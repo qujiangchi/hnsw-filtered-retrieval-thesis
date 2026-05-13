@@ -1,0 +1,8 @@
+
+============================================================
+Dataset: synthetic-nq (50000 base, 5000 queries, dim=768)
+============================================================
+[Flat] synthetic-nq
+  R@10=1.0000, QPS=46.4, L=21.57ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/synthetic-nq_results.csv
+[HNSW] synthetic-nq

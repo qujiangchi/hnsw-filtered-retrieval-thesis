@@ -1,0 +1,6 @@
+Bootstrap: localimage
+From: base.sif
+
+%post
+  micromamba install -y -q -c conda-forge -c pytorch python=3.12 faiss-cpu=1.14.1
+  micromamba clean --all --yes

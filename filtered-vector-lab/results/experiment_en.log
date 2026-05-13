@@ -1,0 +1,8 @@
+
+============================================================
+Dataset: synthetic-enron
+============================================================
+[Flat] synthetic-enron
+  Recall@10=1.0000, QPS=51.7, Latency=19.33ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+[HNSW] synthetic-enron

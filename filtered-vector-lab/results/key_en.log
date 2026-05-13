@@ -1,0 +1,8 @@
+
+============================================================
+Dataset: synthetic-enron (30000 base, 3000 queries, dim=768)
+============================================================
+[Flat] synthetic-enron
+  R@10=1.0000, QPS=138.9, L=7.20ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/synthetic-enron_results.csv
+[HNSW] synthetic-enron

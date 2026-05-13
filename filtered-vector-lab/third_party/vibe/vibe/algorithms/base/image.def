@@ -1,0 +1,43 @@
+Bootstrap: docker
+From: ubuntu:24.04
+
+%files
+  environment.yml /environment.yml
+
+%post
+  apt-get update
+  apt-mark hold openssh-client
+  apt-get install -y build-essential git curl wget cmake
+
+  curl -fL --retry 5 --retry-all-errors -o /tmp/micromamba.tar.bz2 https://micro.mamba.pm/api/micromamba/linux-64/2.5.0
+  tar -xvjf /tmp/micromamba.tar.bz2 bin/micromamba
+
+  mkdir -p /opt/env/micromamba
+
+  export MAMBA_ROOT_PREFIX=/opt/env/micromamba
+  eval "$(micromamba shell hook -s posix)"
+  micromamba activate
+
+  micromamba config set use_lockfiles false
+
+  micromamba install -y -q -f /environment.yml
+  micromamba clean --all --yes
+
+  echo 'export OMP_NUM_THREADS=1' >> $SINGULARITY_ENVIRONMENT
+  echo 'export MKL_NUM_THREADS=1' >> $SINGULARITY_ENVIRONMENT
+  echo 'export OPENBLAS_NUM_THREADS=1' >> $SINGULARITY_ENVIRONMENT
+  echo 'export TBB_NUM_THREADS=1' >> $SINGULARITY_ENVIRONMENT
+  echo 'export NUMEXPR_NUM_THREADS=1' >> $SINGULARITY_ENVIRONMENT
+  echo 'export VECLIB_NUM_THREADS=1' >> $SINGULARITY_ENVIRONMENT
+  echo 'export BLIS_NUM_THREADS=1' >> $SINGULARITY_ENVIRONMENT
+  echo 'export GOTO_NUM_THREADS=1' >> $SINGULARITY_ENVIRONMENT
+  echo 'export NUMBA_NUM_THREADS=1' >> $SINGULARITY_ENVIRONMENT
+  echo 'export JULIA_NUM_THREADS=1' >> $SINGULARITY_ENVIRONMENT
+  echo 'export RAYON_NUM_THREADS=1' >> $SINGULARITY_ENVIRONMENT
+  echo 'export OMP_PROC_BIND=true' >> $SINGULARITY_ENVIRONMENT
+  echo 'export OMP_DYNAMIC=false' >> $SINGULARITY_ENVIRONMENT
+  echo 'export MKL_DYNAMIC=false' >> $SINGULARITY_ENVIRONMENT
+
+  echo 'export MAMBA_ROOT_PREFIX=/opt/env/micromamba' >> $SINGULARITY_ENVIRONMENT
+  echo 'eval "$(micromamba shell hook -s posix)"' >> $SINGULARITY_ENVIRONMENT
+  echo 'micromamba activate' >> $SINGULARITY_ENVIRONMENT

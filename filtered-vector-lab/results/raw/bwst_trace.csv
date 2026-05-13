@@ -1,0 +1,7 @@
+visited_order,node_id,level,label_range,search_type,point_count,duration_ms
+1,1,0,"[0, 100]",range_intersect,100000,0.162
+2,3,1,"[25, 50]",range_intersect,25112,0.101
+3,11,2,"[31.25, 37.5]",range_intersect,6301,0.068
+4,44,3,"[31.25, 33.33]",range_intersect,1575,0.042
+5,45,3,"[33.33, 35.41]",range_intersect,1542,0.029
+6,46,3,"[35.41, 37.5]",range_intersect,1634,0.018

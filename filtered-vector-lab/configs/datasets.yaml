@@ -1,0 +1,42 @@
+# 数据集配置
+
+datasets:
+  synthetic-small:
+    description: "最小合成数据集，用于 MVP 验证"
+    base_count: 10000
+    query_count: 1000
+    dim: 128
+    metric: l2
+    dtype: float32
+    seed: 42
+    filter:
+      type: range
+      widths: [0.01, 0.10, 0.50]
+      field: label
+    k: 10
+
+  synthetic-medium:
+    description: "中等规模合成数据集"
+    base_count: 100000
+    query_count: 10000
+    dim: 128
+    metric: l2
+    dtype: float32
+    seed: 42
+    filter:
+      type: range
+      widths: [0.01, 0.05, 0.10, 0.50]
+      field: label
+    k: 10
+
+  sift-128-euclidean:
+    description: "SIFT 1M 数据集（ANN-Benchmarks 标准）"
+    source: ann-benchmarks
+    metric: euclidean
+    k: 10
+
+  glove-100-angular:
+    description: "GloVe 1.2M 数据集（ANN-Benchmarks 标准）"
+    source: ann-benchmarks
+    metric: angular
+    k: 10

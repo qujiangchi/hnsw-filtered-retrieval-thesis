@@ -1,0 +1,2 @@
+run_id,project,algorithm,dataset,track,filter_type,filter_width,selectivity,k,params_json,recall,qps,avg_latency_ms,p50_latency_ms,p95_latency_ms,p99_latency_ms,build_time_s,index_size_kb,memory_kb,distcomps,threads,raw_result_path,created_at
+,VIBE,hnswlib,synthetic-small,,,,,10,"{""reason"": """", ""status"": ""not_runnable""}",,,,,,,,,,,,,2026-05-13 10:03:31.772189

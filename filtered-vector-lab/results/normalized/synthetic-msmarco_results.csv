@@ -1,0 +1,2 @@
+run_id,project,algorithm,dataset,track,filter_type,filter_width,selectivity,k,params_json,recall,qps,avg_latency_ms,p50_latency_ms,p95_latency_ms,p99_latency_ms,build_time_s,index_size_kb,memory_kb,distcomps,threads,raw_result_path,created_at
+efaf6e6c,flat,flat,synthetic-msmarco,,,,,10,"{""method"": ""brute_force""}",1.0,103.68649217681057,9.644457817077637,,,,0.2408614158630371,,,,1,,2026-05-14 00:55:09.650257

@@ -1,0 +1,51 @@
+# 实验调度配置
+
+# 默认数据集和 k 值
+dataset: synthetic-small
+k: 10
+
+# 实验列表
+experiments:
+  - project: hnswlib
+    algorithm: hnsw
+    enabled: true
+    params:
+      M: [16, 32]
+      ef_construction: [100, 200]
+      ef: [20, 50, 100]
+    num_threads: -1
+
+  - project: RangeFilteredANN
+    enabled: false  # 需先安装 RangeFilteredANN 依赖，暂禁用
+    methods:
+      - prefiltering
+      - postfiltering
+      - vamana_tree
+    filter_width:
+      - "2pow-16"
+      - "2pow-12"
+      - "2pow-8"
+      - "2pow-4"
+    threads: 16
+
+  - project: SIEVE
+    enabled: false  # 需先安装 SIEVE 依赖，暂禁用
+    algorithms:
+      - sieve
+      - hnswlib
+    target_recall:
+      - 0.90
+      - 0.95
+    track: filter
+
+  - project: ann-benchmarks
+    enabled: false  # 需完整数据集，暂禁用
+    algorithms:
+      - hnsw(faiss)
+    args:
+      - M: 16
+        efConstruction: 200
+    query_args:
+      - ef: 10
+      - ef: 50
+      - ef: 100

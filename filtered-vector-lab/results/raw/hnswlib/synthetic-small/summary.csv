@@ -1,0 +1,2 @@
+run_id,project,algorithm,dataset,track,filter_type,filter_width,selectivity,k,params_json,recall,qps,avg_latency_ms,p50_latency_ms,p95_latency_ms,p99_latency_ms,build_time_s,index_size_kb,memory_kb,distcomps,threads,raw_result_path,created_at
+0519fb16,hnswlib,hnsw,synthetic-small,,,,,10,"{""M"": 32, ""ef"": 100, ""ef_construction"": 200, ""num_threads"": -1, ""space"": ""l2""}",0.20949999999999894,1098.2535786881979,0.910536527633667,,,,10.15939211845398,,,,-1,/root/index2/filtered-vector-lab/results/raw/hnswlib/synthetic-small/detail.parquet,2026-05-13 12:41:33.240034

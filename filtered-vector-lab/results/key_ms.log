@@ -1,0 +1,8 @@
+
+============================================================
+Dataset: synthetic-msmarco (50000 base, 5000 queries, dim=768)
+============================================================
+[Flat] synthetic-msmarco
+  R@10=1.0000, QPS=103.7, L=9.64ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/synthetic-msmarco_results.csv
+[HNSW] synthetic-msmarco

@@ -1,0 +1,158 @@
+
+============================================================
+Dataset: synthetic-small
+============================================================
+[Flat] synthetic-small
+  Recall@10=0.2093, QPS=9850.0, Latency=0.10ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+[HNSW] synthetic-small
+  Built M=8 in 1.6s
+    ef=32 => R@10=0.1831, QPS=25998.0, L=0.04ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=64 => R@10=0.2076, QPS=16415.0, L=0.06ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=128 => R@10=0.2106, QPS=8201.2, L=0.12ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=256 => R@10=0.2102, QPS=4786.2, L=0.21ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=512 => R@10=0.2087, QPS=2809.3, L=0.36ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  Built M=16 in 2.9s
+    ef=32 => R@10=0.2094, QPS=12487.7, L=0.08ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=64 => R@10=0.2100, QPS=6899.0, L=0.14ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=128 => R@10=0.2093, QPS=4051.9, L=0.25ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=256 => R@10=0.2094, QPS=2485.7, L=0.40ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=512 => R@10=0.2094, QPS=1600.8, L=0.62ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  Built M=32 in 3.6s
+    ef=32 => R@10=0.2103, QPS=6797.3, L=0.15ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=64 => R@10=0.2093, QPS=3219.8, L=0.31ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=128 => R@10=0.2093, QPS=2569.3, L=0.39ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=256 => R@10=0.2093, QPS=1454.4, L=0.69ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=512 => R@10=0.2092, QPS=1205.3, L=0.83ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  Built M=48 in 3.8s
+    ef=32 => R@10=0.2111, QPS=5469.8, L=0.18ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=64 => R@10=0.2109, QPS=3548.5, L=0.28ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=128 => R@10=0.2094, QPS=2130.7, L=0.47ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=256 => R@10=0.2095, QPS=1350.3, L=0.74ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=512 => R@10=0.2092, QPS=1148.4, L=0.87ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  Built M=64 in 3.9s
+    ef=32 => R@10=0.2097, QPS=5259.3, L=0.19ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=64 => R@10=0.2097, QPS=2940.1, L=0.34ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=128 => R@10=0.2090, QPS=2018.3, L=0.50ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=256 => R@10=0.2092, QPS=1355.9, L=0.74ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=512 => R@10=0.2093, QPS=986.2, L=1.01ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  Built M=96 in 4.0s
+    ef=32 => R@10=0.2119, QPS=4627.5, L=0.22ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=64 => R@10=0.2105, QPS=2736.2, L=0.37ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=128 => R@10=0.2094, QPS=1708.1, L=0.59ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=256 => R@10=0.2092, QPS=1256.8, L=0.80ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    ef=512 => R@10=0.2093, QPS=949.2, L=1.05ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+[IVF-PQ] synthetic-small
+WARNING clustering 10000 points to 1024 centroids: please provide at least 39936 training points
+  Trained nlist=1024, m=16 in 1.6s
+    nprobe=1 => R@10=0.0204, QPS=45360.0, L=0.02ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    nprobe=10 => R@10=0.0560, QPS=21074.7, L=0.05ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    nprobe=50 => R@10=0.0762, QPS=4993.9, L=0.20ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    nprobe=100 => R@10=0.0826, QPS=2033.4, L=0.49ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+WARNING clustering 10000 points to 1024 centroids: please provide at least 39936 training points
+  Trained nlist=1024, m=32 in 1.8s
+    nprobe=1 => R@10=0.0251, QPS=44765.5, L=0.02ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    nprobe=10 => R@10=0.0974, QPS=10349.5, L=0.10ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    nprobe=50 => R@10=0.1418, QPS=1837.0, L=0.54ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    nprobe=100 => R@10=0.1549, QPS=1217.1, L=0.82ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+WARNING clustering 10000 points to 4096 centroids: please provide at least 159744 training points
+  Trained nlist=4096, m=16 in 4.8s
+    nprobe=1 => R@10=0.0226, QPS=28985.2, L=0.03ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    nprobe=10 => R@10=0.0608, QPS=15309.2, L=0.07ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    nprobe=50 => R@10=0.0759, QPS=4693.9, L=0.21ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    nprobe=100 => R@10=0.0813, QPS=2593.8, L=0.39ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+WARNING clustering 10000 points to 4096 centroids: please provide at least 159744 training points
+  Trained nlist=4096, m=32 in 5.1s
+    nprobe=1 => R@10=0.0233, QPS=24700.1, L=0.04ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    nprobe=10 => R@10=0.0945, QPS=7999.6, L=0.13ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    nprobe=50 => R@10=0.1333, QPS=2317.0, L=0.43ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+    nprobe=100 => R@10=0.1455, QPS=1114.6, L=0.90ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+[SWIRL] synthetic-small
+  alpha=0.5 => R@10=0.2093, QPS=3802.4
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  alpha=1.0 => R@10=0.2093, QPS=3777.1
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  alpha=2.0 => R@10=0.2093, QPS=3764.4
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+[WindowSearch] synthetic-small
+  Baseline: R=0.2092, QPS=2118.4, L=0.47ms
+  W=4 => R=0.2092, QPS=3601.2, L=0.28ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  W=8 => R=0.2092, QPS=4342.6, L=0.23ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  W=16 => R=0.2092, QPS=5084.1, L=0.20ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  W=32 => R=0.2092, QPS=5825.5, L=0.17ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  W=64 => R=0.2092, QPS=4872.2, L=0.21ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  W=128 => R=0.2092, QPS=4872.2, L=0.21ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+[SIEVE] synthetic-small
+Traceback (most recent call last):
+  File "scripts/run_thesis_experiments_single_dataset.py", line 379, in <module>
+    main()
+  File "scripts/run_thesis_experiments_single_dataset.py", line 374, in main
+    run_sieve(ds_name, base, query, gt, labels, k=10)
+  File "scripts/run_thesis_experiments_single_dataset.py", line 270, in run_sieve
+    years = np.unique(labels["year"])
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+[SIEVE] synthetic-small
+  SIEVE low: R@10=0.1094, QPS=5084.1, L=0.20ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  PostF low: R@10=0.1222, QPS=2099.0, L=0.48ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  SIEVE medium: R@10=0.1654, QPS=4335.5, L=0.24ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  PostF medium: R@10=0.1401, QPS=2162.4, L=0.46ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  SIEVE high: R@10=0.1085, QPS=5980.5, L=0.19ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+  PostF high: R@10=0.1269, QPS=2223.0, L=0.45ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv

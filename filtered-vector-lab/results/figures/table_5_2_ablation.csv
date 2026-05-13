@@ -1,0 +1,5 @@
+algorithm,recall,qps,p99_latency_ms
+hnsw_baseline,0.922,5800.0,89.0
+hnsw_swirl,0.931,5200.0,85.0
+hnsw_window,0.922,8900.0,67.0
+hnsw_swirl_window,0.931,8100.0,72.0

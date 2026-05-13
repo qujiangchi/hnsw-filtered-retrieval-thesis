@@ -1,0 +1,8 @@
+selectivity,method,recall,avg_latency_ms
+high,postfilter,0.884,28.1
+high,sieve,0.921,22.5
+low,postfilter,0.938,21.2
+low,sieve,0.952,15.8
+medium,postfilter,0.905,24.7
+medium,prefilter,0.823,31.3
+medium,sieve,0.947,18.2

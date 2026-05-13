@@ -1,0 +1,51 @@
+# 算法参数配置
+
+algorithms:
+  hnswlib:
+    description: "基础 HNSW 索引"
+    project: hnswlib
+    params:
+      M: [16, 32]
+      ef_construction: [100, 200]
+      ef: [20, 50, 100]
+      num_threads: -1
+    filter_support: false
+
+  range_filtered_ann:
+    description: "RangeFilteredANN 窗口过滤方法"
+    project: RangeFilteredANN
+    methods:
+      - prefiltering
+      - postfiltering
+      - vamana_tree
+      - super_opt_postfiltering
+    filter_widths:
+      - "2pow-16"
+      - "2pow-12"
+      - "2pow-8"
+      - "2pow-4"
+    threads: 16
+
+  sieve:
+    description: "SIEVE 谓词过滤与索引集合选择"
+    project: SIEVE
+    algorithms:
+      - sieve
+      - hnswlib
+      - prefilter
+    target_recalls: [0.90, 0.95]
+    track: filter
+
+  ann_benchmarks:
+    description: "ANN-Benchmarks 通用框架"
+    project: ann-benchmarks
+    algorithms:
+      - hnsw(faiss)
+      - faiss-ivf
+    definitions:
+      - algorithm: hnsw(faiss)
+        args: [{"M": 16, "efConstruction": 200}]
+        query_args: [[{"ef": 10}], [{"ef": 50}], [{"ef": 100}]]
+      - algorithm: faiss-ivf
+        args: [{"nlist": 100}]
+        query_args: [["nprobe=1"], ["nprobe=10"], ["nprobe=100"]]

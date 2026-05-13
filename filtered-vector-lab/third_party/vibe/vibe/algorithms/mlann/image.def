@@ -1,0 +1,11 @@
+Bootstrap: localimage
+From: base.sif
+
+%post
+  git clone https://github.com/ejaasaari/mlann
+
+  cd mlann
+  git config --global --add safe.directory /mlann
+  git reset --hard 081e7716ca15852a4842432ac42bd81191826a1c
+
+  pip install .

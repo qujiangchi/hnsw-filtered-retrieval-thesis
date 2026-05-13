@@ -1,0 +1,8 @@
+
+============================================================
+Dataset: synthetic-nq
+============================================================
+[Flat] synthetic-nq
+  Recall@10=1.0000, QPS=27.4, Latency=36.50ms
+[result_store] Saved normalized CSV: /root/index2/filtered-vector-lab/results/normalized/all_thesis_experiments.csv
+[HNSW] synthetic-nq

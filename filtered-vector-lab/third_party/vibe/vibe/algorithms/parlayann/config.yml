@@ -1,0 +1,72 @@
+uint8:
+  euclidean:
+  - base_args: ['@metric']
+    constructor: ParlayANN
+    disabled: false
+    singularity_image: parlayann
+    module: vibe.algorithms.parlayann
+    name: vamana(parlayann)
+    run_groups:
+      parlayann-64:
+        args: [[64], [1.2, 1.4, 1.6], [64, 128, 192]]
+        query_args: [[10, 20, 40, 80, 100, 125, 150, 200, 300, 400, 500, 600, 800, 1000]]
+      parlayann-128:
+        args: [[128], [1.2, 1.4, 1.6], [128, 192]]
+        query_args: [[10, 20, 40, 80, 100, 125, 150, 200, 300, 400, 500, 600, 800, 1000]]
+float:
+  cosine:
+  - base_args: ['@metric']
+    constructor: ParlayANN
+    disabled: true
+    singularity_image: parlayann
+    module: vibe.algorithms.parlayann
+    name: vamana(parlayann)
+    run_groups:
+      parlayann-64:
+        args: [[64], [1.2, 1.4, 1.6], [64, 128, 192]]
+        query_args: [[10, 20, 40, 80, 100, 125, 150, 200, 300, 400, 500, 600, 800, 1000]]
+      parlayann-128:
+        args: [[128], [1.2, 1.4, 1.6], [128, 192]]
+        query_args: [[10, 20, 40, 80, 100, 125, 150, 200, 300, 400, 500, 600, 800, 1000]]
+  ip:
+  - base_args: ['@metric']
+    constructor: ParlayANN
+    disabled: true
+    singularity_image: parlayann
+    module: vibe.algorithms.parlayann
+    name: vamana(parlayann)
+    run_groups:
+      parlayann-64:
+        args: [[64], [0.6, 0.75, 0.9], [64, 128, 192]]
+        query_args: [[10, 20, 40, 80, 100, 125, 150, 200, 300, 400, 500, 600, 800, 1000]]
+      parlayann-128:
+        args: [[128], [0.6, 0.75, 0.9], [128, 192]]
+        query_args: [[10, 20, 40, 80, 100, 125, 150, 200, 300, 400, 500, 600, 800, 1000]]
+  normalized:
+  - base_args: ['@metric']
+    constructor: ParlayANN
+    disabled: true
+    singularity_image: parlayann
+    module: vibe.algorithms.parlayann
+    name: vamana(parlayann)
+    run_groups:
+      parlayann-64:
+        args: [[64], [0.6, 0.75, 0.9], [64, 128, 192]]
+        query_args: [[10, 20, 40, 80, 100, 125, 150, 200, 300, 400, 500, 600, 800, 1000]]
+      parlayann-128:
+        args: [[128], [0.6, 0.75, 0.9], [128, 192]]
+        query_args: [[10, 20, 40, 80, 100, 125, 150, 200, 300, 400, 500, 600, 800, 1000]]
+  euclidean:
+  - base_args: ['@metric']
+    constructor: ParlayANN
+    disabled: true
+    singularity_image: parlayann
+    module: vibe.algorithms.parlayann
+    name: vamana(parlayann)
+    run_groups:
+      parlayann-64:
+        args: [[64], [1.2, 1.4, 1.6], [64, 128, 192]]
+        query_args: [[10, 20, 40, 80, 100, 125, 150, 200, 300, 400, 500, 600, 800, 1000]]
+      parlayann-128:
+        args: [[128], [1.2, 1.4, 1.6], [128, 192]]
+        query_args: [[10, 20, 40, 80, 100, 125, 150, 200, 300, 400, 500, 600, 800, 1000]]
