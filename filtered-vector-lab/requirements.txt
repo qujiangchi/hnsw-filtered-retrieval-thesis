@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+plotly
+pybind11
+h5py
+matplotlib
+scikit-learn
+tqdm
+pytest
