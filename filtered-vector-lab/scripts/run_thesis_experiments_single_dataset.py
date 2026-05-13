@@ -34,12 +34,20 @@ def recall_at_k(gt, pred, k):
 
 
 def load_dataset(name):
-    d = PROJECT_ROOT / "data" / "processed" / name
-    base = np.load(d / "base.npy")
-    query = np.load(d / "query.npy")
-    gt = np.load(d / "groundtruth.npy")
-    labels = np.load(d / "labels.npy")
-    return base, query, gt, labels
+    # 优先从 data/real/ 加载真实数据集，其次从 data/processed/ 加载合成数据
+    candidates = [
+        PROJECT_ROOT / "data" / "real" / name,
+        PROJECT_ROOT / "data" / "processed" / name,
+    ]
+    for d in candidates:
+        if (d / "base.npy").exists():
+            print(f"  Loading dataset from {d}")
+            base = np.load(d / "base.npy")
+            query = np.load(d / "query.npy")
+            gt = np.load(d / "groundtruth.npy")
+            labels = np.load(d / "labels.npy") if (d / "labels.npy").exists() else None
+            return base, query, gt, labels
+    raise FileNotFoundError(f"Dataset '{name}' not found in {candidates}")
 
 
 def already_run(project, algorithm, dataset, params_json):
@@ -267,6 +275,15 @@ def run_window_search(ds_name, base, query, gt, k=10):
 def run_sieve(ds_name, base, query, gt, labels, k=10):
     print(f"[SIEVE] {ds_name}")
     dim = base.shape[1]
+    # If no labels provided (e.g., MS MARCO/NQ without metadata), generate synthetic ones
+    if labels is None:
+        n = base.shape[0]
+        np.random.seed(42)
+        dtype = np.dtype([("year", np.int16), ("domain", np.int8), ("category", np.int8)])
+        labels = np.empty(n, dtype=dtype)
+        labels["year"] = np.random.randint(1999, 2003, size=n)
+        labels["domain"] = np.random.randint(0, 4, size=n)
+        labels["category"] = np.random.randint(0, 3, size=n)
     # Handle both structured arrays (from new generator) and plain arrays (from old generator)
     if labels.dtype.names is not None:
         years = np.unique(labels["year"])
